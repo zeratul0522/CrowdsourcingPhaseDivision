@@ -32,7 +32,9 @@ public class GplotReader {
                 int count = 0;
                 nodename = new HashMap<Integer, String>();
                 //locations and services
-                while((line = br.readLine()) != null && flag2 == 0){
+                //while的条件非常重要，如果&&前后互换的话会出错，第二条分割线=====后面的第一条数据会读不出来
+                while(flag2 == 0 && (line = br.readLine()) != null ){
+                   // System.out.println("line="+line);
                     if(line.equals("=====")){
                         if(flag1 == 0){
                             flag1 = 1;
@@ -60,6 +62,7 @@ public class GplotReader {
                 }
                 //links
                 while((line = br.readLine()) != null){
+                    //System.out.println(line);
                     String[] split = line.split("-");
                     String src = split[0];
                     String dest = split[1];
@@ -67,6 +70,12 @@ public class GplotReader {
                             get(0)][HashMapUtil.findIndexInHashmap(dest,nodename).get(0)] = 1;
 
                 }
+//                for(int i = 0; i < nodename.size(); i++){
+//                    for(int j = 0; j < nodename.size();j++){
+//                        System.out.print(matrix[i][j]);
+//                    }
+//                    System.out.println("");
+//                }
                 br.close();
             }else{
                 System.out.println("文件不存在！");

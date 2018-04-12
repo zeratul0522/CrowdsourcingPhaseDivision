@@ -232,6 +232,7 @@ public class DatabaseOperation {
             Statement state = conn.createStatement();   //容器
             //String sql = "insert into requester(namerequester) values(\"ashiley\");";   //SQL语句
 
+            //System.out.println(singlePath.get(singlePath.size()-1)+"===");
             rs1 = state.executeQuery("SELECT idworker FROM test_crowdsourcingdb.worker where" +
                     " (FIND_IN_SET('" + singlePath.get(singlePath.size()-1) + "',permission_location) or  FIND_IN_SET('" + singlePath.get(singlePath.size()-1)
                     + "',permission_resource)) " + "and FIND_IN_SET('" + singlePath.get(singlePath.size()-1) + "',spatial_willing_region);");         //将sql语句上传至数据库执行
@@ -284,7 +285,7 @@ public class DatabaseOperation {
 
 
     public static void main(String[] args) throws SQLException{
-        String s = "A->B->C->E->H->I->K->L->service2";
+        String s = "Hallway A->Dining Hall->Gymnasium->Library->Hallway B->Administration Building->Material Registration";
         String[] split = s.split("->");
         ArrayList<String> stringArrayList = new ArrayList<String>();
         for(int i = 0; i < split.length;i++ ){

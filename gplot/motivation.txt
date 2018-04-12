@@ -1,0 +1,52 @@
+Mail Room
+Hallway A
+Public Activity Area A
+Security Room
+IT Department Building
+Dining Hall
+Software Building
+Gymnasium
+Library
+Administration Building
+Hallway B
+Office Building
+Public Activity Area B
+=====
+Fetch Product
+IT Equipment Assemble
+Material Registration
+=====
+Mail Room-Hallway A
+Hallway A-Mail Room
+Hallway A-Public Activity Area A
+Public Activity Area A-Hallway A
+Hallway A-Security Room
+Security Room-Hallway A
+Hallway A-Dining Hall
+Dining Hall-Hallway A
+Public Activity Area A-IT Department Building
+IT Department Building-Public Activity Area A
+Security Room-IT Department Building
+IT Department Building-Security Room
+IT Department Building-Software Building
+Software Building-IT Department Building
+Dining Hall-Gymnasium
+Gymnasium-Dining Hall
+Gymnasium-Library
+Library-Gymnasium
+Library-Hallway B
+Hallway B-Library
+Hallway B-Administration Building
+Administration Building-Hallway B
+Hallway B-Public Activity Area B
+Public Activity Area B-Hallway B
+Public Activity Area B-Office Building
+Office Building-Public Activity Area B
+Office Building-Software Building
+Software Building-Office Building
+Mail Room-Fetch Product
+Fetch Product-Mail Room
+IT Department Building-IT Equipment Assemble
+IT Equipment Assemble-IT Department Building
+Administration Building-Material Registration
+Material Registration-Administration Building

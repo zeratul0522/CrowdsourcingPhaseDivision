@@ -1,6 +1,7 @@
 package cn.edu.fudan.selab.cpd.algorithm;
 
 import cn.edu.fudan.selab.cpd.util.DatabaseOperation;
+import cn.edu.fudan.selab.cpd.util.HashMapUtil;
 import cn.edu.fudan.selab.cpd.util.TaskAssignment;
 
 import java.lang.reflect.Array;
@@ -31,6 +32,7 @@ public class PhaseDivision {
     }
 
     public void findAssignmentDistribution(ArrayList<String> singlePath){
+
         TaskAssignment ta;
         int singleWorkerNum = checkSingleWorker(singlePath).size();
         //原子任务
@@ -138,8 +140,11 @@ public class PhaseDivision {
         //HashMapUtil.printMapValue(hm);
         int[][] matrix = new int[hm.size()][hm.size()];
         matrix = gplotReader.getMatrix();
+
+       // System.out.println(matrix[0][1]);
         PathFinder pf = new PathFinder(matrix, hm, src, dest);
         pf.getPath();
+        //System.out.println("executed");
         for(String s : pf.getResult()){
             result.add(s);
         }
@@ -148,13 +153,11 @@ public class PhaseDivision {
 
     public static void main(String[] args){
         ArrayList<Integer> al = new ArrayList<Integer>();
-        al.add(1);
-        al.add(2);
-        al.add(3);
-        al.add(4);
-        al.add(5);
+        for(int i = 6; i <=12; i++){
+            al.add(i);
+        }
         PhaseDivision pd = new PhaseDivision(al);
-        String s = "B->K->I->service3";
+        String s = "Hallway A->Dining Hall->Gymnasium->Library->Hallway B->Administration Building->Material Registration";
         String[] split = s.split("->");
         ArrayList<String> stringArrayList = new ArrayList<String>();
         for(int i = 0; i < split.length;i++ ){

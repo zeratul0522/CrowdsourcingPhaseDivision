@@ -35,6 +35,7 @@ public class PathFinder {
     }
 
     public void getPath(){
+
         if(HashMapUtil.findIndexInHashmap(srcStr,nodeName).size() == 0){
             System.out.println("PathFinder failed: source not found!");
             return;
@@ -45,7 +46,9 @@ public class PathFinder {
         }
         src = HashMapUtil.findIndexInHashmap(srcStr,nodeName).get(0);
         dest = HashMapUtil.findIndexInHashmap(destStr,nodeName).get(0);
+//        /System.out.println("getPath() called, src = "+src+" dest = "+dest);
         getPath(src,dest,""+nodeName.get(src));
+
     }
 
     public void getPath(int src, int dest, String path){

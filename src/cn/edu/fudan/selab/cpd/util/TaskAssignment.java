@@ -1,5 +1,7 @@
 package cn.edu.fudan.selab.cpd.util;
 
+import cn.edu.fudan.selab.cpd.algorithm.AlgorithmInit;
+
 import java.util.ArrayList;
 
 /**
@@ -34,4 +36,6 @@ public class TaskAssignment {
     public void setSubTaskPath(ArrayList<String> subTaskPath) {
         this.subTaskPath = subTaskPath;
     }
+
+
 }
