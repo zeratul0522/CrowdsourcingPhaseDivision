@@ -1,4 +1,4 @@
-# Crowdsourcing Phase Division
+# Brief Introduction
 This project includes test code for our CSCW2018 paper which mainly focused on spatial crowdsourcing with consideration to 
 location access permission and offline service permission.
 
