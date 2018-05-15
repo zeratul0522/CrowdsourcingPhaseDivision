@@ -15,13 +15,13 @@ import java.util.*;
  */
 public class AlgorithmInit {
 
-    public static void main(String[] argas){
+    public static void main(String[] args){
 
         //The task phases are specified by requester.
         ArrayList<TaskPhase> taskPhaseArrayList = new ArrayList<TaskPhase>();
         taskPhaseArrayList.add(new TaskPhase("Mail Room","Fetch Product"));
         taskPhaseArrayList.add(new TaskPhase("","IT Equipment Assemble"));
-        taskPhaseArrayList.add(new TaskPhase("Hallway B","Material Registration"));
+        taskPhaseArrayList.add(new TaskPhase("Library","Material Registration"));
         init("motivation",taskPhaseArrayList);
     }
 
